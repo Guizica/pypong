@@ -1,3 +1,10 @@
 import pygame, sys
-SCREEN_WIDTH = 720
-SCREEN_HEIGHT = 1280
+from pygame.math import Vector2
+from level import Level
+
+screen = 1280, 720
+blue= 0,0,255
+
+
+
+

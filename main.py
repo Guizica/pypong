@@ -3,7 +3,9 @@ from settings import *
 class Game():
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((SCREEN_HEIGHT,SCREEN_WIDTH))
+        self.screen = pygame.display.set_mode((1280, 720 ))
+        self.clock = pygame.time.Clock()
+        self.level = Level()
 
     def run(self):
         while True:
@@ -11,6 +13,9 @@ class Game():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+            dt = self.clock.tick() / 2
+            self.level.run(dt)
+            pygame.draw.rect((50,50,50,50))
             pygame.display.update()
 
 if __name__ == '__main__':
