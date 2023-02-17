@@ -5,5 +5,4 @@ class Player(pygame.sprite.Sprite):
         super().__init__(group)
         self.image = pygame.Surface((32,72))
         self.image.fill('green')
-        self.rect = self.image.get_rect(center = pos)
-        
+        self.rect = self.image.get_rect(center = pos) 
