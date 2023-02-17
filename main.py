@@ -15,7 +15,7 @@ class Game():
                     sys.exit()
             dt = self.clock.tick() / 2
             self.level.run(dt)
-            pygame.draw.rect((50,50,50,50))
+            
             pygame.display.update()
 
 if __name__ == '__main__':

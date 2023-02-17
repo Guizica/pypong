@@ -3,6 +3,7 @@ from settings import *
 class Player(pygame.sprite.Sprite):
     def __init__(self,pos, group):
         super().__init__(group)
-        self.pos = pygame.math.Vector2(self.rect.center)
-        self.speed = 200
-    
+        self.image = pygame.Surface((32,72))
+        self.image.fill('green')
+        self.rect = self.image.get_rect(center = pos)
+        
